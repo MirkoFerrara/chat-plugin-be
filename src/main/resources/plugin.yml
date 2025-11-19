@@ -1,0 +1,7 @@
+id: chat-plugin
+name: Chat Plugin
+version: 1.0.0
+main: com.yourapp.plugins.chat.ChatPlugin
+migrationPath: db/migration/chat
+description: Real-time chat functionality
+author: Mirko
