@@ -18,6 +18,14 @@
 	<name>chat</name>
 	<description>Chat Plugin for Spring Boot</description>
 
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/MirkoFerrara/chat-plugin-be</url>
+		</repository>
+	</distributionManagement>
+
 	<properties>
 		<java.version>21</java.version>
 		<lombok.version>1.18.34</lombok.version>
@@ -83,17 +91,12 @@
 
 	<build>
 		<plugins>
-			<!-- ❌ RIMUOVI o DISABILITA spring-boot-maven-plugin -->
-			<!-- Il plugin NON è un'app standalone -->
-
-			<!-- ✅ USA SOLO maven-jar-plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>3.3.0</version>
 			</plugin>
 
-			<!-- ✅ Maven Compiler Plugin per Lombok -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>

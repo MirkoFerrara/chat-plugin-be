@@ -1,0 +1,3 @@
+# chat-plugin_be/src/main/resources/META-INF/spring.factories
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.plugin.chat.ChatPluginConfiguration
