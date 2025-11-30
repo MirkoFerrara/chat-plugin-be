@@ -15,9 +15,9 @@ CREATE TABLE IF NOT EXISTS chat_room_members (
     joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE IF NOT EXISTS chat_messages (
-    id VARCHAR(36) PRIMARY KEY,
-    message_id VARCHAR(36),
+CREATE TABLE chat_messages (
+    id BIGSERIAL PRIMARY KEY,
+    message_id VARCHAR(36) UNIQUE,
     chat_id VARCHAR(36) NOT NULL,
     sender_id VARCHAR(36) NOT NULL,
     content TEXT,

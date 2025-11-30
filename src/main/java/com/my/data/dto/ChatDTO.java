@@ -7,7 +7,7 @@ import java.time.Instant;
 @Data
 @Builder
 public class ChatDTO {
-    private String id;
+    private Long id;
     private String messageId;
     private String chatId;
     private String senderId;

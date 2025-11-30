@@ -1,20 +1,18 @@
 package com.my.data.entity;
 
-import com.my.data.UuidIdentifiable;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.time.Instant;
-import java.util.UUID;
 
 @Data
 @Table("chat_messages")
 public class ChatMessageEntity {
 
     @Id
-    private String id = UUID.randomUUID().toString();
+    private Long id;
 
     @Column("message_id")
     private String messageId;
