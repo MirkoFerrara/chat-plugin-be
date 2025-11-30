@@ -83,6 +83,7 @@ public class ChatService {
 
     private ChatMessageEntity convertToEntity(ChatDTO dto) {
         ChatMessageEntity entity = new ChatMessageEntity();
+        entity.setChatId(dto.getChatId());
         entity.setMessageId(dto.getMessageId() != null ? dto.getMessageId() : UUID.randomUUID().toString());
         entity.setSenderId(dto.getSenderId());
         entity.setContent(dto.getContent());
